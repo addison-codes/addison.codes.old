@@ -1,0 +1,19 @@
+.animated:hover {
+	animation: vibrate 0.75s linear infinite;
+}
+
+@keyframes vibrate {
+	0%,
+	100% {
+		text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #f00;
+	}
+	25% {
+		text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #f00;
+	}
+	50% {
+		text-shadow: 1.5px -1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
+	}
+	75% {
+		text-shadow: -1.5px 1.5px 0 #0ff, 1.5px -1.5px 0 #f00;
+	}
+}
