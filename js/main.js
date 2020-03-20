@@ -1,19 +1,18 @@
-// const elements = document.querySelectorAll('.square');
+document.onload(animate());
 
-// anime({
-// 	targets: '.square',
-// 	translateX: 1000,
-// 	direction: 'alternate',
-// 	duration: 1000,
-// 	loop: true,
-// 	easing: 'easeInOutCirc'
-// });
+function animate() {
+	anime({
+		targets: '.card',
+		translateY: -50,
+		delay: anime.stagger(100, { start: 100, from: 'center' })
+	});
 
-// anime({
-// 	targets: '.square-holder',
-// 	translateY: 500,
-// 	direction: 'alternate',
-// 	duration: 5000,
-// 	loop: true,
-// 	easing: 'linear'
-// });
+	anime({
+		targets: '.halo',
+		scale: [1, 1.05],
+		duration: 1500,
+		direction: 'alternate',
+		easing: 'easeInOutQuad',
+		loop: true
+	});
+}

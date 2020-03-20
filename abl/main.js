@@ -1,6 +1,6 @@
 // Book Class
 class Book {
-	constructor(img, title, author, series, isbn) {
+	constructor(img, title, author) {
 		this.img = img;
 		this.title = title;
 		this.author = author;
@@ -30,10 +30,10 @@ class UI {
 
 	static showAlert(message, className) {
 		const div = document.createElement('div');
-		div.className = `alert alert-absolute alert-${className}`;
-		div.appendChild(document.createTextNode(message));
 		const holder = document.querySelector('.alert-holder');
 		const form = document.querySelector('#book-form');
+		div.className = `alert alert-absolute alert-${className}`;
+		div.appendChild(document.createTextNode(message));
 		holder.insertBefore(div, form);
 
 		setTimeout(() => document.querySelector('.alert').remove(), 2000);

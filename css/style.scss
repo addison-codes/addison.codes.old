@@ -5,24 +5,61 @@
 @keyframes vibrate {
 	0%,
 	100% {
-		text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #f00;
+		text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #ffb6c1;
 	}
 	25% {
-		text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #f00;
+		text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #ffb6c1;
 	}
 	50% {
-		text-shadow: 1.5px -1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
+		text-shadow: 1.5px -1.5px 0 #0ff, -1.5px 1.5px 0 #ffb6c1;
 	}
 	75% {
-		text-shadow: -1.5px 1.5px 0 #0ff, 1.5px -1.5px 0 #f00;
+		text-shadow: -1.5px 1.5px 0 #0ff, 1.5px -1.5px 0 #ffb6c1;
 	}
 }
 
-.square {
-	width: 50px;
-	height: 50px;
-	margin: auto;
-	background-color: red;
-	transform: translateX(550px);
-	float: left;
+body,
+.jumbotron {
+	background: linear-gradient(270deg, #ffb6c1, #fff, #0ff);
+	background-size: 600% 600%;
+	animation: gradientAnim 20s infinite;
+}
+.card-deck {
+	margin-top: 50px;
+
+	.card {
+		background: rgba(0, 0, 0, 0);
+	}
+}
+
+.halo {
+	margin: 100px auto 0px;
+	border: 3px solid #ffbcd8;
+	border-radius: 100%;
+	height: 100px;
+	width: 100px;
+	animation: neon 1.5s ease-in-out infinite alternate;
+	animation-delay: 1.5s;
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+}
+
+@keyframes neon {
+	from {
+		box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+	}
+	to {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
+	}
+}
+
+@keyframes gradientAnim {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
